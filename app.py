@@ -7,7 +7,8 @@ api = Api(app)
 
 
 class cpAPI(Resource):
-    def get(self):
+    @staticmethod
+    def get():
         return scrap.fetchContests()
 
 

@@ -1,6 +1,3 @@
-from bs4 import BeautifulSoup as bs
-import requests
-import json
 from platforms import atcoder, codechef, codeforces, hackerearth
 
 
