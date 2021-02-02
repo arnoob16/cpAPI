@@ -6,7 +6,19 @@
     An API built to give you updates about the upcoming contests on various Competitive Coding platforms.
 </p>
 
+<p align="center">
+<img src="https://img.shields.io/badge/Contribution-Welcome-blue?style=for-the-badge">
+<img src="https://img.shields.io/github/stars/arnoob16/cpAPI?color=gold&style=for-the-badge">
 </p>
+
+<p align="center">
+<img src="https://img.shields.io/github/issues/arnoob16/cpAPI?style=for-the-badge&color=red">
+<img src="https://img.shields.io/github/forks/arnoob16/cpAPI?style=for-the-badge">
+<img src="https://img.shields.io/github/issues-pr-closed/arnoob16/cpAPI?color=green&style=for-the-badge">
+</p>
+
+
+
 
 ---
 
