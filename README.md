@@ -43,6 +43,7 @@
 - Each contest object has 4 parameters, 
     - `platform` => The coding platform that is hosting the contest.
     - `contestName` => The name of the contest.
+    - `contestLink` => URL of the contest.
     - `startTime` => The starting timestamp of the contest.
     - `contestDuration` => The duration of the contest.
 
@@ -51,15 +52,17 @@
   "contests": [
     {
       "platform": "CodeChef",
-      "contestName": "Programmers Army Monthly Contest - Bit Manipulation",
-      "startTime": "2021-01-31T19:30:00+0530",
-      "contestDuration": "02:00 hours."
+      "contestName": "CP in 7 days",
+      "contestLink": "https://www.codechef.com/CP7D2021?itm_campaign=contest_listing",
+      "startTime": "2021-02-03T16:30:00+0530",
+      "contestDuration": "02:30 hours."
     },
     {
       "platform": "CodeChef",
-      "contestName": "Clash Wildcard",
-      "startTime": "2021-01-31T21:00:00+0530",
-      "contestDuration": "02:00 hours."
+      "contestName": "February Challenge 2021",
+      "contestLink": "https://www.codechef.com/FEB21?itm_campaign=contest_listing",
+      "startTime": "2021-02-05T15:00:00+0530",
+      "contestDuration": "10 Days"
     }
     ]
 }
