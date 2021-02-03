@@ -24,7 +24,6 @@ def getCodechefContests():
             end = datetime.strptime(elements[2].get(
                 "data-endtime")[0:elements[2].get("data-endtime").index("+")], '%Y-%m-%dT%H:%M:%S')
             td = (end - start)
-            print(td)
             totalSeconds = td.total_seconds()
             days = int(totalSeconds//86400)
             remainingSeconds = totalSeconds%86400
