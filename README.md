@@ -38,7 +38,7 @@
     How to use this API?
 </h3>
 
-- Send a `GET` request to https://cp-contests-api.herokuapp.com/ URL.
+- Send a `GET` request to https://cp-api.arnoob16.vercel.app/ URL.
 - Response received is an Array of Contest Objects
 - Each contest object has 4 parameters, 
     - `platform` => The coding platform that is hosting the contest.
