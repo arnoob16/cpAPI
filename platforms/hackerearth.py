@@ -16,6 +16,7 @@ def getHackerearthContests():
             hackerearthContest["platform"] = "HackerEarth"
             if contest["status"] == "UPCOMING":
                 hackerearthContest["contestName"] = contest["title"]
+                hackerearthContest["contestLink"] = contest["url"]
                 start = contest["start_tz"][0: contest["start_tz"].rindex(
                     ':')] + contest["start_tz"][contest["start_tz"].rindex(':')+1:]
                 start = start.replace(" ", "T")

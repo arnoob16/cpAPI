@@ -16,6 +16,7 @@ def getCodechefContests():
             codechefContest = {}
             codechefContest["platform"] = "CodeChef"
             codechefContest["contestName"] = elements[0].text.strip()
+            codechefContest["contestLink"] = "https://www.codechef.com"+elements[0].select("a")[0].get("href")
             codechefContest["startTime"] = elements[1].get(
                 "data-starttime").replace('+05:30', '+0530')
             start = datetime.strptime(
