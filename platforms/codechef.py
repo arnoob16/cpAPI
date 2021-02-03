@@ -30,14 +30,22 @@ def getCodechefContests():
             hours = int(remainingSeconds//3600)
             remainingSeconds = remainingSeconds%3600
             minutes = int(remainingSeconds//60)
-
+            dayPresent = False
+            hourPresent = False
             contestDuration = ""
             if days:
-                contestDuration += str(days)+" Days, "
+                dayPresent = True
+                contestDuration += str(days)+" Days"
             if hours:
-                contestDuration += str(hours)+" Hours, "
+                if dayPresent:
+                    contestDuration+=", "
+                contestDuration += str(hours)+" Hours"
+                hourPresent = True
             if minutes:
+                if hourPresent or dayPresent:
+                    contestDuration += ", "
                 contestDuration += str(minutes)+" Minutes"
+            contestDuration+="."
             codechefContest["contestDuration"] = contestDuration
 
             codechefContests.append(codechefContest)
