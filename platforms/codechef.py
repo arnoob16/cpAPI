@@ -24,20 +24,29 @@ def getCodechefContests():
             end = datetime.strptime(elements[2].get(
                 "data-endtime")[0:elements[2].get("data-endtime").index("+")], '%Y-%m-%dT%H:%M:%S')
             td = (end - start)
-            if td.seconds//3600 == 0:
-                codechefContest["contestDuration"] = str(td.days) + " Days"
-            else:
-                hours = ""
-                mins = ""
-                if (td.seconds)//3600 < 10:
-                    hours = "0" + str((td.seconds)//3600)
-                else:
-                    hours = (td.seconds)//3600
-                if ((td.seconds)//60) % 60 < 10:
-                    mins = "0" + str(((td.seconds)//60) % 60)
-                else:
-                    mins = ((td.seconds)//60) % 60
-                codechefContest["contestDuration"] = str(
-                    hours) + ":" + str(mins) + " hours."
+            totalSeconds = td.total_seconds()
+            days = int(totalSeconds//86400)
+            remainingSeconds = totalSeconds%86400
+            hours = int(remainingSeconds//3600)
+            remainingSeconds = remainingSeconds%3600
+            minutes = int(remainingSeconds//60)
+            dayPresent = False
+            hourPresent = False
+            contestDuration = ""
+            if days:
+                dayPresent = True
+                contestDuration += str(days)+" Days"
+            if hours:
+                if dayPresent:
+                    contestDuration+=", "
+                contestDuration += str(hours)+" Hours"
+                hourPresent = True
+            if minutes:
+                if hourPresent or dayPresent:
+                    contestDuration += ", "
+                contestDuration += str(minutes)+" Minutes"
+            contestDuration+="."
+            codechefContest["contestDuration"] = contestDuration
+
             codechefContests.append(codechefContest)
     return codechefContests
